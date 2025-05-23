@@ -18,32 +18,29 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const usuario = { nome, email, senha };
+    var notas = []
 
-    try {
-      // Simula envio ou substitua com fetch() para backend real
-      console.log('Enviando dados de cadastro:', usuario);
+function salvarNota() {
 
-      // Exemplo de fetch:
-      // const response = await fetch('/api/cadastrar', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(usuario)
-      // });
+  /**
+   * AQUI DEVE SER A LÓGICA
+   * 1. Capturar o valor digitado no textarea
+   * 2. Verificar se o valor não está vazio
+   * 3. Adicionar ao array notas[]
+   * 4. Limpar o campo
+   */
 
-      // const resultado = await response.json();
-      // alert('Cadastro realizado com sucesso!');
+  carregarNotas();
+}
 
-      alert('Cadastro simulado com sucesso!');
-      form.reset();
-    } catch (error) {
-      console.error('Erro ao cadastrar:', error);
-      alert('Erro ao realizar cadastro. Tente novamente mais tarde.');
-    }
+/** NÃO MEXA NA FUNÇÃO CARREGAR NOTAS */
+function carregarNotas() {
+  const lista = document.getElementById('listaNotas');
+  lista.innerHTML = "";
+
+  notas.forEach((nota, index) => {
+    const li = document.createElement('li');
+    li.textContent = nota;
+    lista.appendChild(li);
   });
-
-  function validarEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email.toLowerCase());
-  }
-});
+}

@@ -1,26 +1,52 @@
+body 
+  font-family: Arial;
+  background-color: f4f4f4
+  margin 0
+  padding 0;
 
-   <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Cadastro de Aluno</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-    }
-    label, input {
-      display: block;
-      margin-bottom: 10px;
-    }
-  </style>
-</head>
-<body>
+.container 
+  max-width: 600px;
+  padding 2rem
+  border-radius 10px
+  box-shadow 0 0 10px #ccc
+  background white;
 
-  <h2>Cadastro de Aluno</h2>
+h1, h2 
+  color: 333
+  text-align: center
 
-  <form id="formAluno">
-    <label for="nome">Nome do Aluno:</label>
-    <input type="text" id="nome" name="nome" required>
-    <button type="submit">Salvar</button>
-  </form>
+textarea {
+  width 100%
+  height: 100px
+  padding: 10px
+  font-size: 1rem
+  margin-bottom 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize none;
+}
+
+button
+  width 100%;
+  padding 12px
+  background-color: #0077cc
+  color white;
+  font-size 1rem
+  border none;
+  border-radius 5px
+  cursor: pointer
+
+ul {
+  list-style-type: none
+  padding none
+}
+
+li {
+  background-color #eef
+  margin-bottom 10
+  padding 10px
+  border-left: 5px solid #0077cc
+  border-radius: 4px
+}
+
+  
